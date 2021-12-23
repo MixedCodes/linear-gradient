@@ -6,10 +6,10 @@ const randomBtn = document.getElementById("random");
 
 setGradient();
 
+
 function setGradient() {
+	body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 	css.textContent = `The gradient is ${color1.value} and ${color2.value}`
-
-
 } 
 
 function noGenerator() {
@@ -17,7 +17,7 @@ function noGenerator() {
 }
 
 function rgbToHex() { 
-  const hex = noGenerator().toString(16);
+  var hex = noGenerator().toString(16);
   if (hex.length < 2) {
        hex = "0" + hex;
   }
@@ -25,7 +25,7 @@ function rgbToHex() {
 };
 
 function randomColorNo() {
-	const randomC = "#" + rgbToHex()
+	var randomC = "#" + rgbToHex()
 				 + rgbToHex()
 				 + rgbToHex();
 	return randomC;
